@@ -9,6 +9,6 @@ class NiceController extends Controller
     public function Fun($duok, $kuku = 'keturi')
     {
         $tipomas = ['lolas', 'wowas', 'csgo', 'minecraft'];
-        return view('kitkas.fun', ['kuku' => $kuku, 'tipomas' => $tipomas]);
+        return view('kitkas.fun', ['kuku' => $kuku, 'tipomas' => $tipomas, 'duok' => $duok]);
     }
 }

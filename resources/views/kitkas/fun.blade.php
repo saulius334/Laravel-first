@@ -4,6 +4,8 @@
 Super fun
 @endsection
 
+@include('kitkas.bu')
+
 
 @section('whynot')
 
@@ -20,7 +22,9 @@ lol haha
 
 @endif
 
-@foreach ($tipomas as $item)
+@forelse ($tipomas as $item)
     <h2>{{$item}}</h2>
-@endforeach
+    @empty 
+    <h1>nieko ner</h1>
+@endforelse
 @endsection
