@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\NiceController as NiceCon;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,3 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/eziukas', function () {
+    return '<h1>ezzzziukas</h1>';
+});
+Route::get('/fun/{kiek}/{abc?}', [NiceCon::class, 'fun']);
