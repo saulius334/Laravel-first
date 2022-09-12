@@ -21,3 +21,6 @@ Route::get('/eziukas', function () {
     return '<h1>ezzzziukas</h1>';
 });
 Route::get('/fun/{kiek}/{abc?}', [NiceCon::class, 'fun']);
+
+Route::get('/suma', [NiceCon::class, 'showForm'])->name('show');
+Route::post('/suma', [NiceCon::class, 'doForm'])->name('calculate');
